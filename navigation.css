@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+li{
+    float: left;
+    padding: 8px 16px;
+    font-family: arial;
+    font-weight: normal;
+    cursor: pointer;
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+li:hover{
+    background: #ccc;
+}
+.nav.panel{
+    background: #f1f1f1;
+    width: 600px;
+    margin: 10px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.nav.more{
+    position: relative;
+}
+.nav.more:hover .dropbox{
+    display: block;
+}
+.nav.dropbox{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    text-decoration: none;
+    margin: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.nav.dropbox>a{
+    display: block;
+    padding: 4px 16px;
+    font-family: arial;
+    font-size: 16px;
+    text-decoration: none;
+    width: 80%;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+.nav.dropbox>a:hover{
+    background: #ccc;
+}
