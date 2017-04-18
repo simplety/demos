@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">信息收集表</h2>
+        <div class="content">
+            <form>
+                <div class="info name">
+                    <label for="name">姓名</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="info qq">
+                    <label for="name">QQ</label>
+                    <input type="number" name="QQ" id="qq">
+                </div>
+                <div class="info words">
+                    <label for="words">要说的话</label>
+                    <textarea id="words" name="words"></textarea>
+                </div>
+                <div class="remark">
+                    <div class="food">
+                        <input type="checkbox" name="food" id="food-milk">
+                        <label for="food-milk">Milk</label>
+                        <br>
+                        <input type="checkbox" name="food" id="food-sugar">
+                        <label for="food-sugar">Sugar</label>
+                        <br>
+                        <input type="checkbox" name="food" id="food-lemon">
+                        <label for="food-lemon">Lemon</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" name="gender" id="gender-male">
+                        <label for="gender-male">Male</label>
+                        <br>
+                        <input type="radio" name="gender" id="gender-female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

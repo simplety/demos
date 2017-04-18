@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: arial;
+}
+form{
+    padding: 16px;
+}
+
+.container{
+    background: #fffs;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container>.title{
+    background: #009688;
+    color: #fff;
+    line-height: 1.5;
+    padding: 15px 16px;
+}
+.content{
+    color:#757575;
+    padding: 1px 16px;
+    line-height: 1.5;
+}
+.content div{
+    margin: 10px 0;
+}
+.content label{
+    vertical-align: center;
+}
+.info input, .info textarea{
+    border: none;
+    border-bottom: 1px #808080 solid;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+}
+.content textarea{
+    height: 50px;
+}
+.remark>.food{
+    width: 50%;
+    float: left;
+}
+.remark{
+    overflow: auto;
+}
+.remark>.gender{
+    overflow: auto;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    padding: 8px 16px;
+    color: #fff;
+    background: #009688;
+    border: 0;
+}
+

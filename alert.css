@@ -1,0 +1,41 @@
+h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: arial;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 10px;
+    line-height: 1;
+}
+.container{
+    width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+.box{
+    margin-top: 30px;
+    padding: 1px 16px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.box.v1{
+    background: #4CAF50;
+}
+.box.v2{
+    background: #2196F3;
+}
+.box.v3{
+    background: #f44336;
+}
+.box.v4{
+    background: #ff9800;
+}
+.close{
+    float: right;
+}
