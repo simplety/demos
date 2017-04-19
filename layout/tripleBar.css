@@ -1,0 +1,28 @@
+.left{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #ea8068;
+}
+.right{
+    width: 100px;
+    height: 150px;
+    float: right;
+    background: #ee856a;
+}
+.main{
+    height: 500px;
+    background: #e2c79a;
+    margin-left: 101px;
+    margin-right: 101px;
+}
+#content:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#footer{
+    height: 50px;
+    margin-top: 1px;
+    background: #deb959;
+}

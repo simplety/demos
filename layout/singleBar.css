@@ -1,0 +1,21 @@
+body{
+    min-width: 960px;
+}
+.center-layout{
+    margin: 0 auto;
+    width: 960px;
+}
+#head{
+    height: 100px;
+    background: #ea8068;
+}
+#footer{
+    height: 50px;
+    background: #ee856a;
+}
+#content{
+    height: 500px;
+    width: 960px;
+    background: #e2c79a;
+}
+
