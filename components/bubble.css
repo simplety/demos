@@ -1,0 +1,44 @@
+.wrap {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 30px;
+  border: 1px solid #ccc;
+}
+.triangle1:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ccc;
+  transform: translate(10px, -20px);
+}
+.triangle2:before {
+  content: "";
+  float: right;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid red;
+  border-right: 10px solid red;
+  transform: translate(1px,-1px);
+}
+.triangle3:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  left: 10px;
+  top: -4px;
+  background: #fff;
+/*  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  transform: translate(10px, -38px);
+  -webkit-transform: translate(10px, -30px);*/
+}
