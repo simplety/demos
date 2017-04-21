@@ -3,8 +3,9 @@
   padding: 0;
 }
 body{
-  min-width: 600px;
-  font-size: 12px;
+  font: 14px/1.8 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  background-color: #dedede;
+  color: #333;
 }
 ul,
 li {
@@ -23,32 +24,83 @@ a {
   *zoom: 1;
 }
 h3.title{
-  font-size: 14px;
+  width: 40%;
+  font-size: 18px;
   font-weight: 700;
   border-bottom: 1px solid #ccc;
   padding-top: 20px;
   padding-bottom: 5px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+/*vertical-stroke tyle pf list style*/
+ul.vertical-stroke-list li{
+  border-left: 2px solid #333;
+  padding-left: 50px;
+  position: relative;
+}
+ul.vertical-stroke-list li:before{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  position: absolute;
+  top: 8px;
+  left: -6px;
+}
+/*button style of list: each item starts with a button*/
+ul.btn-list li{
+  padding-left: 50px;
+  position: relative;
+}
+ul.btn-list li:before{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+}
+ul.btn-list li:after{
+  content: "+";
+  position: absolute;
+  display: inline-block;
+  color: #333;
+  top: 1px;
+  left: 9px;
+}
+/*grid view of list*/
+ul.grid-list li{
+  float: left;
+  width: 160px;
+  height: 60px;
 }
 #page {
-  width: 600px;
-  height: 400px;
+  max-width: 900px;
+  /*min-width: 800px;*/
   background: #fff;
   margin: 3px auto;
-  padding: 10px 20px;
+  padding: 50px 50px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
 #header {
-  padding: 30px 0;
+/*  padding: 20px 0;*/
+  margin: 10px 0;
 }
 #header>.icon {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   background: #000;
   border-radius: 50%;
   position: relative;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 .virgule-wrap::before{
   content: "";
@@ -62,19 +114,19 @@ h3.title{
   transform-origin:bottom center;
   transform: rotate(135deg);
 }
-.icon>.aside,
-.icon>.next{
+#header>.icon>.aside,
+#header>.icon>.next {
   color: #fff;
   position: absolute;
-  font-size: 16px;
+  font-size: 26px;
 }
-.icon>.aside{
-  left: 25px;
-  top: 25px;
+#header>.icon>.aside{
+  left: 35px;
+  top: 35px;
 }
-.icon>.next{
-  right: 25px;
-  bottom: 25px;
+#header>.icon>.next{
+  right: 35px;
+  bottom: 35px;
 }
 #header>.icon .left,
 #header>.icon .right {
@@ -87,33 +139,34 @@ h3.title{
 #header>.icon .left {
   transform:translate(25%,25%);
 }
-#header>.info{
-  margin: 0 20px 0 10px;
+#header>.info {
+  margin-right: 10%;
   float: left;
 }
 #header>.info>.name{
   font-family: Lantinghei SC;
   font-weight: 100;
-  margin: 10px 0;
+  margin-top: 20px;
   font-size: 32px;
 }
 #header>.info>.job{
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 #header>div.contacts{
-  float: right;
-  margin-left: 20px;
-  width: 230px;
-  font-size: 12px;
+  float: left;
+  width: 40%;
+  min-width: 300px;
 }
 #header p.contacts-title{
-  font-size: 14px;
-  border-bottom: 2px solid #000;
-  margin: 5px -20px 5px 0;
+  font-size: 18px;
+  border-bottom: 3px solid #000;
+  margin: 5px 0;
+  font-weight: bold;
 }
 #header ul.contacts>li{
-  padding: 1px 0;
+  padding: 2px 0;
 }
 #header .contacts-address:before{
   content: "A";
@@ -138,6 +191,63 @@ h3.title{
   font-weight: 600;
   display: inline-block;
   width: 30px;
+}
+ul.vertical-stroke-list li{
+  border-left: 2px solid #333;
+  padding-left: 50px;
+  position: relative;
+}
+ul.vertical-stroke-list li:before{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  position: absolute;
+  top: 8px;
+  left: -6px;
+}
+#content>div.work .work-company,
+#content>div.education .education-university
+{
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+}
+#content .divider::after{
+  content:" / ";
+}
+#content>div.work .work-date,
+#content>div.education .education-date
+{
+  display: inline-block;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#content>div.activities{
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+#content>div.skills{
+  float: left;
+  width: 48%;
+  min-width: 350px;
+}
+#content>div.activities h3,
+#content>div.skills h3
+{
+  display: inline-block;
+  width: 60%;
+}
+#content>div.activities h4,
+#content>div.skills h4
+{
+  font-size: 16px;
+  font-weight: normal;
 }
 
 
