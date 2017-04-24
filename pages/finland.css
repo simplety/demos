@@ -68,8 +68,10 @@ header .icon:hover{
 header .icon-nav1{
   color: #fff;
   border: 1px solid #fff;
-  font-size: 20px;
   float: right;
+}
+header .icon-nav1:before{
+  font-size: 25px;
 }
 .row-nav{
   font-family: avenirblack,"Helvetica Neue",Helvetica,Arial,sans-serif;
