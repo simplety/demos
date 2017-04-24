@@ -66,12 +66,10 @@ header .icon:hover{
   color: #fff;
 }
 header .icon-nav1{
-  font-family: "iconfont";
   color: #fff;
-  float: right;
-  width: 50px;
-  height: 50px;
   border: 1px solid #fff;
+  font-size: 20px;
+  float: right;
 }
 .row-nav{
   font-family: avenirblack,"Helvetica Neue",Helvetica,Arial,sans-serif;
