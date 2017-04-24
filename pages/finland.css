@@ -64,17 +64,12 @@ header .icon{
 header .icon:hover{
   color: #fff;
 }
-header .icon-nav1{
-
-}
 header .icon-nav1:before{
   color: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
   font-size: 30px;
   display: inline-block;
-  width: 40px;
-  height: 40px;
   float: right;
 }
 .row-nav{
