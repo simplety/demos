@@ -444,7 +444,9 @@ section {
 #season img:hover {
     border: none;
 }
-
+#season img.end:hover{
+    border: 5px solid lightgrey;
+}
 #season .detail {
     position: absolute;
     top: 0;
