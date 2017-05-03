@@ -623,4 +623,34 @@ footer a{
 footer a:hover{
     color: #31ccfd;
 }
+@media (max-width: 800px) {
+    footer{
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    footer>div.wrap>div{
+        width: 100%;
+        text-align: center;
+        line-height: 20px;
+    }
+    footer>div.wrap:before{
+        display: none;
+    }
+    footer .copyright{
+        vertical-align: baseline;
+        height: 20px;
+    }
+    footer .icon{
+        vertical-align: baseline;
+        height: 20px;
+    }
+    footer .icon svg{
+        vertical-align: baseline;
+    }
+    footer .ref{
+        text-align: center;
+        line-height: 20px;
+    }
+}
 
