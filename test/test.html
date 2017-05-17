@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+<ul class="ct">
+    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/10/20160110200240_iKRuT.thumb.700_0.jpeg">鼠标放置查看图片1</li>
+    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/08/20160108234133_8EHPi.thumb.700_0.jpeg">鼠标放置查看图片2</li>
+    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/08/20160108234203_mSJFi.thumb.700_0.jpeg">鼠标放置查看图片3</li>
+</ul>
+<div class="img-preview"></div>
+<script>
+
+$(".ct").addEventListener("click",function(e){
+  var img = $("img") || document.createElement("img")
+  var imgSrc = e.target.getAttribute("data-img")
+  img.setAttribute("src",imgSrc)
+  $(".img-preview").append(img)
+})
+function $(selector){
+  return document.querySelector(selector);
+}
+function $$(selector){
+  return document.querySelectorAll(selector);
+}
+</script>
+
+</body>
+
+</html>

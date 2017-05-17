@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tab切换</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .wrap {
+        width: 602px;
+        margin: 20px auto;
+        border: 1px solid #aaa;
+    }
+
+    .tab-head {
+        width: 603px;
+        overflow: hidden;
+        border-bottom: 1px solid transparent;
+    }
+
+    .tab-head li {
+        width: 200px;
+        float: left;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px 0;
+        border-right: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        cursor: pointer;
+    }
+
+    .tab-head li.active {
+        background: #f1f1f1;
+    }
+
+    .tab-content {
+        padding: 10px;
+        line-height: 1.5;
+        height: 300px;
+    }
+
+    .tab-content li {
+        display: none;
+    }
+
+    .tab-content li.active {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="tab-head clearfix">
+            <li class="active">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+        </ul>
+        <ul class="tab-content">
+            <li class="active">content1</li>
+            <li>content2</li>
+            <li>content3</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    $(".tab-head").addEventListener("click", function(e) {
+        if (e.target.tagName.toLowerCase() === "li") {
+            $$(".tab-head>li").forEach(function(el) {
+                el.classList.remove("active")
+            })
+            e.target.classList.add("active")
+            $$(".tab-content>li").forEach(function(el){
+                el.classList.remove("active")
+            })
+            var index = [].indexOf.call($$(".tab-head>li"),e.target)
+            $(".tab-content").children[index].classList.add("active")
+        }
+    })
+
+    function $(selector) {
+        return document.querySelector(selector)
+    }
+
+    function $$(selector) {
+        return document.querySelectorAll(selector)
+    }
+    </script>
+</body>
+
+</html>
