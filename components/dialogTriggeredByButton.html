@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style type="text/css">
+    body {
+        font-size: 16px;
+    }
+
+    a {
+        text-decoration: none;
+        float: right;
+        cursor: pointer;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .dialog {
+        display: none;
+    }
+
+    .dialog.active {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid red;
+    }
+
+    .dialog-panel {
+        width: 300px;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .dialog-head {
+        line-height: 2.5;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+    }
+
+    .dialog-head>p {
+        margin: 0;
+    }
+
+    .dialog-content {
+        padding: 20px 10px;
+    }
+
+    .dialog-panel>a {
+        padding: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <button>点我</button>
+    <div class="dialog">
+        <div class="dialog-panel clearfix">
+            <div class="dialog-head">
+                <a class="cancel" href="#">×</a>
+                <p>我是标题</p>
+            </div>
+            <div class="dialog-content">我是内容
+                <br>我是内容</div>
+            <a class="cancel" href="#">取消</a>
+            <a class="confirmed" href="#">确定</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $("button").addEventListener("click", function() {
+        $("div.dialog").classList.add("active");
+    })
+    $$("a.cancel").forEach(function(el) {
+        el.addEventListener("click", function(e) {
+            e.preventDefault();
+            $("div.dialog").classList.remove("active");
+        })
+    })
+    $$("a.confirmed").forEach(function(el) {
+        el.addEventListener("click", function(e) {
+            e.preventDefault();
+        })
+    })
+
+    function $(selector) {
+        return document.querySelector(selector)
+    }
+
+    function $$(selector) {
+        return document.querySelectorAll(selector)
+    }
+    </script>
+</body>
+
+</html>
