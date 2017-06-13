@@ -3,33 +3,64 @@
 
 <head>
     <title>Document</title>
-    <style type="text/css">
-    </style>
 </head>
 
 <body>
-<ul class="ct">
-    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/10/20160110200240_iKRuT.thumb.700_0.jpeg">鼠标放置查看图片1</li>
-    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/08/20160108234133_8EHPi.thumb.700_0.jpeg">鼠标放置查看图片2</li>
-    <li data-img="https://b-ssl.duitang.com/uploads/item/201601/08/20160108234203_mSJFi.thumb.700_0.jpeg">鼠标放置查看图片3</li>
-</ul>
-<div class="img-preview"></div>
-<script>
+    <ul>
+    </ul>
+    <button id="btn">load more</button>
+    <script type="text/javascript">
+    function ajax(opts) {
 
-$(".ct").addEventListener("click",function(e){
-  var img = $("img") || document.createElement("img")
-  var imgSrc = e.target.getAttribute("data-img")
-  img.setAttribute("src",imgSrc)
-  $(".img-preview").append(img)
-})
-function $(selector){
-  return document.querySelector(selector);
-}
-function $$(selector){
-  return document.querySelectorAll(selector);
-}
-</script>
+        opts.url = opts.url || ""
+        opts.type = opts.type || "get"
+        opts.data = opts.data || {};
+        opts.success = opts.success || function(){}
+        opts.error = opts.error || function(){}
 
+        var query = []
+        for(i in opts.data){
+          query.push(i + "=" + opts.data[i])
+        }
+        query = query.join("&")
+
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+          if(xhr.status == 200 || xhr.status == 304){
+            opts.success(JSON.parse(xhr.response))
+          }else{
+            opts.error()
+          }
+        }
+
+
+        if(opts.type.toLowerCase() === "get"){
+          xhr.open(opts.type, opts.url+"?"+query, true)
+          console.log(opts.url+"?"+query)
+          xhr.send()
+        }else if(opts.type.toLowerCase() === "post"){
+          xhr.open(opts.type, opts.url, true)
+          xhr.send(query)
+        }
+    }
+
+    document.querySelector('#btn').addEventListener('click', function() {
+        ajax({
+            url: '/login', //接口地址
+            type: 'get', // 类型， post 或者 get,
+            data: {
+                username: 'xiaoming1',
+                password: 'abcd1234'
+            },
+            success: function(ret) {
+                console.log(ret); // {status: 0}
+            },
+            error: function() {
+                console.log('出错了')
+            }
+        })
+    });
+    </script>
 </body>
 
 </html>
