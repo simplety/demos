@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>postMessage demo</title>
+  <style type="text/css">
+  .wrap,
+  iframe {
+    width: 600px;
+    height: 200px;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 400px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h2>Sender</h3>
+    <h3>localhost:8080/postMessage.html</h1>
+    <label for="username">用户名</label>
+    <input type="text" name="username" id="username" placeholder="localhost:8080/postMessage.html">
+  </div>
+
+  <iframe src="http://www.kaisla.com:8080/postMessage-received.html"></iframe>
+
+  <script type="text/javascript">
+    var url = $("iframe").src
+    $("input").addEventListener("input",function(){
+      window.frames[0].postMessage(this.value,url)
+    })
+
+    window.addEventListener("message",function(e){
+      $("input").value = e.data;
+    })
+
+    function $(selector){
+      return document.querySelector(selector)
+    }
+
+  </script>
+</body>
+
+</html>
