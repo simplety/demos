@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: Arial,Verdana,"\5b8b\4f53";
+  color: #666;
+  box-sizing: border-box;
+}
+h2{
+  font-size: 20px;
+}
+p,a{
+  font-size: 12px;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.wrap{
+  width: 700px;
+  margin: 0 auto;
+}
+.pro-list{
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.product{
+  width: 220px;
+  padding: 10px;
+  border: 1px solid #f1f1f1;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+div.cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+}
+div.cover>a{
+  color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid red;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  transform: translate(-50%,-50%);
+  display: none;
+  cursor: pointer;
+}
+.product:hover>div.cover{
+  display: block;
+}
+.product:hover>div.cover>a{
+  display: block;
+}
+div.cover>a:hover{
+  background: red;
+  color: #fff;
+}
+.product>a{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.add-product{
+  width: 100px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: red;
+  border: solid 1px red;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.add-product:hover{
+  background: red;
+  color: #fff;
+}
