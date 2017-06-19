@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tab demo</title>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .tab {
+    margin: 10px 0;
+  }
+
+  .tab-head>li {
+    width: 90px;
+    float: left;
+    border: 1px solid #aaa;
+    border-right: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .tab-head>li.active {
+    background: #aaa;
+  }
+
+  .tab-head>li:last-child {
+    border-right: 1px solid #aaa;
+  }
+
+  .tab-content.wrap {
+    width: 304px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  ul.tab-content {
+    width: 304px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .tab-content>li {
+    padding: 5px;
+    height: 90px;
+  }
+
+  .tab-content>li:nth-child(1) {
+    background: lightblue;
+  }
+
+  .tab-content>li:nth-child(2) {
+    background: lightyellow;
+  }
+
+  .tab-content>li:nth-child(3) {
+    background: pink;
+  }
+
+  div.horizontal .tab-content {
+    width: 1000px;
+    font-size: 0;
+  }
+
+  div.horizontal .tab-content.wrap {
+    width: 304px;
+  }
+
+  div.horizontal .tab-content>li {
+    width: 294px;
+    height: 100px;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  </style>
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="tab vertical">
+    <h2>垂直切换tab</h2>
+    <ul class="tab-head clearfix">
+      <li class="active">tab1</li>
+      <li>tab2</li>
+      <li>tab3</li>
+    </ul>
+    <div class="tab-content wrap">
+      <ul class="tab-content">
+        <li class="active">content1</li>
+        <li>content2</li>
+        <li>content3</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab horizontal">
+    <h2>水平切换tab</h2>
+    <ul class="tab-head clearfix">
+      <li class="active">tab1</li>
+      <li>tab2</li>
+      <li>tab3</li>
+    </ul>
+    <div class="tab-content wrap">
+      <ul class="tab-content clearfix">
+        <li class="active">content1</li>
+        <li>content2</li>
+        <li>content3</li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(".vertical ul.tab-head>li").on("click", function() {
+    var $this = $(this)
+    var index = $this.index()
+    var height = $this.parents("div.tab").find("ul.tab-content>li").innerHeight()
+
+    $this.addClass("active").siblings().removeClass("active")
+    $this.parents("div.tab").find("ul.tab-content")
+      .animate({
+        top: -index * height
+      }, 1000)
+  })
+  $(".horizontal ul.tab-head>li").on("click", function() {
+    var $this = $(this)
+    var index = $this.index()
+    var width = $this.parents("div.tab").find("ul.tab-content>li").innerWidth()
+
+    $this.addClass("active").siblings().removeClass()
+    $this.parents("div.tab").find("ul.tab-content")
+      .animate({
+        left: -index * width
+      }, 1000)
+  })
+  </script>
+</body>
+
+</html>
