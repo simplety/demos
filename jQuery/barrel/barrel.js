@@ -27,7 +27,6 @@ Barrel.prototype = {
                 _this.render(imgInfo);
             }
         });
-        imgUrls.
     },
     render: function(imgInfo){
         this.rowInfo.push(imgInfo);
