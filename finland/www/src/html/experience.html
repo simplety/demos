@@ -6,7 +6,7 @@
     <title>Visit Finland -> Experience</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/experience.css">
-    <script src="../js/lib/require.js" data-src="../js/main"></script>
+    <script src="../js/lib/require.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -58,10 +58,15 @@
     </footer>
 </div>
 <script>
-    //加载入口模块
-    requirejs(["../js/main"],function(){
-        requirejs(['app/experience']);
+    requirejs.config({
+        baseUrl: "../js",
+        paths: {
+            "jquery": "./lib/jquery.min"
+        }
     });
+    //加载入口模块
+    requirejs(['app/experience']);
+
 </script>
 </body>
 </html>

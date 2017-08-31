@@ -19,14 +19,13 @@ body{
     justify-content: center;
 }
 .waterfall li{
-    width: 280px;
     min-height: 50px;
     margin: 0 10px;
     /*overflow: hidden;*/
     /*border: 1px solid #666;*/
 }
 .waterfall .news{
-    width: 280px;
+    width: 290px;
     border: 1px solid #dfdfdf;
     margin: 5px;
     padding: 5px;

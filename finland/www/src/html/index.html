@@ -7,7 +7,7 @@
     <title>Visit Finland</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <script src="../js/lib/require.js" data-src="../js/main"></script>
+    <script src="../js/lib/require.js"></script>
     <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_jfwtff38e24q85mi.css">-->
     <!--<script type="text/javascript" src="src/js/com/iconfont.js"></script>-->
     <!--[if lt IE 9]>
@@ -264,12 +264,14 @@
         </footer>
     </div>
     <script>
-
-        //加载入口模块
-        requirejs(["../js/main"],function(){
-            requirejs(['app/index']);
+        requirejs.config({
+            baseUrl: "../js",
+            paths: {
+                "jquery": "./lib/jquery.min"
+            }
         });
-       // console.log(requirejs);
+        //加载入口模块
+        requirejs(['app/index']);
     </script>
 </body>
 
