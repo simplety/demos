@@ -6,7 +6,7 @@ define(["jquery","com/exposure"], function ($,Exposure) {
 
     function _Waterfall($ct) {
         this.init($ct);
-        this.getOnePage(this.curPage,this.bind());
+        this.bind();
         // this.getOnePage(this.curPage,function(){
         //     this.curPage++;
         // });
@@ -67,6 +67,7 @@ define(["jquery","com/exposure"], function ($,Exposure) {
 
         },
         getOnePage: function(curPage,success){
+            console.log("get one page");
             this.requestNews().done(function(response){
                 var newsList = response.data,
                     loadedCount = 0;
