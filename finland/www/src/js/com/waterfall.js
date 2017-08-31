@@ -6,8 +6,7 @@ define(["jquery","com/exposure"], function ($,Exposure) {
 
     function _Waterfall($ct) {
         this.init($ct);
-        this.getOnePage();
-        this.bind();
+        this.getOnePage(this.curPage,this.bind());
         // this.getOnePage(this.curPage,function(){
         //     this.curPage++;
         // });

@@ -7,7 +7,7 @@
 //     new goTop();
 // })
 
-define(["jquery", "com/iconfont", "com/goTop", "com/carousel"],
+define("index",["jquery", "com/iconfont", "com/goTop", "com/carousel"],
     function ($, Iconfont, GoTop, Carousel, Exposure) {
         Carousel.init();
         Iconfont.init();

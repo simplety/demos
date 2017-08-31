@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" type="text/css" href="../css/experience.css">
     <script src="../js/lib/require.js"></script>
-    <script src="../js/app/index.js"></script>
+    <script src="../js/require-config-experience.js"></script>
+    <script src="../js/app/experience.js"></script>
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -57,17 +58,5 @@
         </div>
     </footer>
 </div>
-<script>
-    requirejs.config({
-        baseUrl: "../js",
-        paths: {
-            "jquery": "./lib/jquery.min"
-        },
-        waitSeconds: 0
-    });
-    //加载入口模块
-    requirejs(['app/experience']);
-
-</script>
 </body>
 </html>
