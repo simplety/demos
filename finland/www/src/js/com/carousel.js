@@ -2,12 +2,12 @@
  * Created by Kaisla on 15/08/2017.
  */
 define(["jquery","com/util"],function($,util){
-
+    //全屏Carousel
     function _Carousel($ct) {
         this.$ct = $ct;
         this.$imgWrap = this.$ct.find(".imgList");
         this.$imgList = this.$ct.find(".imgList>li");
-        this.$anchorList = this.$ct.find(".anchor>li")
+        this.$anchorList = this.$ct.find(".anchor>li");
 
         this.imgWidth = $(window).outerWidth(); //注意宽度可变
         this.imgCount = this.$imgList.length;
@@ -31,13 +31,15 @@ define(["jquery","com/util"],function($,util){
         //添加头尾两个li的副本 & 设置ul的宽度，使其能容纳所有节点；
         init: function () {
             this.$ct.find(".imgList").width(this.imgWidth * (this.imgCount + 2));
-            //设置全屏
-            this.$ct.find(".full-window").css("width",this.imgWidth);
+
             this.$imgWrap.css("left", -this.imgWidth);
             this.$imgList.eq(0).clone().appendTo(this.$imgWrap);
             this.$imgList.eq(-1).clone().prependTo(this.$imgWrap);
-        },
 
+            //设置全屏
+            this.$fullWindow = this.$ct.find(".full-window");
+            this.$fullWindow.css("width", this.imgWidth);
+        },
         //检查是第一个或是最后一个li，如果是的话立即跳转后设置锚点，否则直接设置锚点
         check: function (index) {
             if(typeof index != "number"){return};

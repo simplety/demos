@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>Visit Finland -> Experience</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/experience.css">
+    <script src="../js/lib/require.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <a href="index.html" class="icon">VisitFinland</a>
+    <div class="nav"></div>
+</header>
+<div id="content" class="clearfix">
+    <h1>Experiences</h1>
+    <p class="description">People around the world share their feelings about tourist in finland.</p>
+    <div class="img-view waterfall">
+        <!--<ul class="img-view clearfix">-->
+            <!--&lt;!&ndash;<li class="col clearfix">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="news">&ndash;&gt;-->
+            <!--&lt;!&ndash;<img data-src="https://unsplash.it/500/200/?random">&ndash;&gt;-->
+            <!--&lt;!&ndash;<h3>Title</h3>&ndash;&gt;-->
+            <!--&lt;!&ndash;<p>description</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--</ul>-->
+        <!--<div class="hiddenFooter"></div>-->
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <div class="copyright">
+                <span>Copyright&copy;Kaisla</span>
+            </div>
+            <div class="icon">
+                <svg class="icon-facebook" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+                <svg class="icon-twitter" aria-hidden="true">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg>
+                <svg class="icon-linkedin" aria-hidden="true">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg>
+            </div>
+            <div class="ref">
+                <a href="#">Term of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    //加载入口模块
+    requirejs(["../js/main"],function(){
+        requirejs(['app/experience']);
+    });
+</script>
+</body>
+</html>
