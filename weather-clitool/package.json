@@ -1,0 +1,24 @@
+{
+  "name": "weather-clitool",
+  "version": "1.0.5",
+  "description": "a command tool to check weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tianqi",
+    "weather"
+  ],
+  "author": "kaisla",
+  "bin": {
+    "weather": "./bin/weather",
+    "tianqi": "./bin/weather"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.2.0",
+    "public-ip": "^2.3.5",
+    "r2": "^2.0.0"
+  }
+}

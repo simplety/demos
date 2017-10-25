@@ -1,0 +1,422 @@
+
+/*#home {*/
+    /*background-image: url(../www/img/Header_lapland_konsta_aurora_hannes_matala-1600x900.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center, center;*/
+    /*background-attachment: fixed;*/
+    /*background: url(http://static3.visitfinland.com/wp-content/uploads/Header_lapland_konsta_aurora_hannes_matala-1600x900.jpg) no-repeat fixed center center;*/
+    /*background-size: cover;*/
+    /*text-align: center;*/
+    /*height: 100%;*/
+/*}*/
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #666;
+}
+.carousel .imgList{
+    height: 100%;
+    width: 1000%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 0;
+}
+.carousel .imgList>li{
+    height: 100%;
+    width: 10%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    text-align: center;
+}
+
+.carousel .arrow{
+    width: 52px;
+    height: 52px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    color: #f1f1f1;
+    top: 50%;
+    margin-top: -15px;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+}
+.carousel .prev{
+    left: 10px;
+}
+.carousel .next{
+    right: 10px;
+}
+.carousel .anchor{
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 0;
+    bottom: 40px;
+}
+.carousel .anchor>li{
+    width: 40px;
+    height: 5px;
+    background: #f1f1f1;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.carousel .anchor>li.active{
+    background: #666;
+}
+
+#home{
+    height: 100%;
+}
+#home .wrap{
+    position: relative;
+    z-index: 1;
+}
+#home h1 {
+    margin-top: 220px;
+}
+
+#home .border-btn {
+    margin-top: 40px;
+}
+#attraction h1,
+#experience h1,
+#season h1,
+#team h1,
+#contact h1{
+    margin-top: 30px;
+    color: lightblue;
+}
+
+#attraction{
+    background: #333;
+    padding: 30px;
+}
+
+#attraction ul {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#attraction svg{
+    width: 120px;
+    height: 120px;
+    margin: 30px;
+    border-radius: 50%;
+}
+#attraction svg:hover{
+    width: 140px;
+    height: 140px;
+    margin: 20px;
+}
+#attraction h3 {
+    /*color: #31ccfd;*/
+    color: lightblue;
+}
+
+#attraction p.detail {
+    line-height: 1.5;
+}
+
+#experience {
+    background: #555;
+    padding: 30px 20px;
+}
+#experience ul {
+    margin: 30px auto;
+}
+
+#experience li {
+    background: lightblue;
+    margin-bottom: 10px;
+    float: left;
+    /*  background-image: url("http://static1.visitfinland.com/wp-content/uploads/MEK-LAPPEENRANTA-24_45842-400x300.jpg");*/
+    /*  margin-bottom: 5%;*/
+}
+
+@media (min-width: 300px) {
+    #experience li {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    #experience li {
+        width: 49.5%;
+        margin-right: 1%;
+    }
+    #experience li:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    #experience li {
+        float: left;
+        width: 33%;
+        margin-right: .5%;
+    }
+    #experience li:nth-child(2n) {
+        margin-right: .5%;
+    }
+    #experience li:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+#experience .wrap {
+    position: relative;
+    font-size: 0;
+}
+
+#experience img {
+    width: 100%;
+    height: auto;
+    background: lightblue;
+}
+
+#experience .shadow {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 5px;
+}
+
+#experience p {
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+#experience a {
+    display: inline-block;
+    color: lightblue;
+    position: absolute;
+    width: 100%;
+    font-size: 14px;
+    bottom: 5%;
+    left: 0;
+}
+
+#experience h3 {
+    color: #444;
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 20%;
+}
+
+#experience li:hover .shadow {
+    display: block;
+}
+
+#season {
+    background: #333;
+    padding: 30px 10px;
+}
+
+#season p.description {
+    padding-bottom: 20px;
+}
+
+#season .wrap {
+    max-width: 960px;
+    margin: auto;
+}
+
+#season ul {
+    padding: 0;
+    margin: 30px 0;
+    font-size: 0;
+}
+
+#season li {
+    position: relative;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+#season li:last-child {
+    padding-bottom: 0;
+}
+
+#season h3 {
+    color: lightblue;
+}
+
+#season li:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    border-left: 2px solid #777;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+#season img {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 5px solid lightgrey;
+}
+
+#season img:hover {
+    border: none;
+}
+#season img.end:hover{
+    border: 5px solid lightgrey;
+}
+#season .detail {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    text-align: left;
+    margin-left: 90px;
+}
+
+#season .detail h3 {
+    font-size: 20px;
+}
+
+#season .detail p {
+    font-size: 14px;
+}
+
+#season li:nth-child(2n) .detail {
+    text-align: right;
+    left: 0;
+    right: 50%;
+    margin-left: 0;
+    margin-right: 90px;
+}
+
+@media (max-width: 600px) {
+    #season li {
+        text-align: left;
+    }
+    #season li:after {
+        left: 0;
+        right: 0;
+        margin-left: 79px;
+    }
+    #season .detail {
+        text-align: left;
+        left: 0;
+        right: 0;
+        margin-left: 180px;
+    }
+    #season li:nth-child(2n) .detail {
+        text-align: left;
+        left: 0;
+        right: 0;
+        margin-left: 180px;
+    }
+    #season .detail p {
+        display: -webkit-box;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+#team {
+    background: #555;
+    padding: 30px 10px;
+}
+
+#team h3{
+    color: lightblue;
+}
+#team>ul{
+    max-width: 960px;
+    margin: 70px 0;
+}
+#team>ul img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #f1f1f1;
+}
+#team>ul p{
+    min-width: 300px;
+}
+#contact{
+    background: #333;
+    padding: 30px;
+}
+#contact form{
+    max-width: 960px;
+    margin: 80px auto;
+    text-align: center;
+}
+#contact .wrap{
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+}
+#contact input{
+    display: block;
+    height: 70px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#contact textarea{
+    float: left;
+    width: 49%;
+    height: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#contact button{
+    display: inline-block;
+    width: 30%;
+    background: lightblue;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 40px;
+}
+#contact button:hover{
+    background: #31ccfd;
+    color: #fff;
+    transform: translate(0, 1px);
+}
+@media (max-width: 700px){
+    #contact .wrap{
+        width: 100%;
+    }
+    #contact textarea{
+        width: 100%;
+    }
+}
+
+

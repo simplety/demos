@@ -1,0 +1,56 @@
+body{
+    background: #333;
+}
+#content {
+    padding-top: 80px;
+}
+
+#content .img-view{
+    margin: 30px 0;
+}
+.waterfall{
+    min-width: 900px;
+    min-height: 100%;
+    margin: 0 auto;
+    /*border: 1px solid #666;*/
+}
+.waterfall>ul{
+    display: flex;
+    justify-content: center;
+}
+.waterfall li{
+    min-height: 50px;
+    margin: 0 10px;
+    /*overflow: hidden;*/
+    /*border: 1px solid #666;*/
+}
+.waterfall .news{
+    width: 290px;
+    border: 1px solid #dfdfdf;
+    margin: 5px;
+    padding: 5px;
+    min-height: 50px;
+}
+.waterfall .news.hidden{
+    visibility: hidden;
+}
+.waterfall .news>img{
+    width: 100%;
+}
+.waterfall .news>h3{
+    border-bottom: 1px solid #dfdfdf;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    margin-top: 5%;
+}
+.waterfall .news>p{
+    color: #777371;
+    font-size: 14px;
+    margin-top: 5%;
+}
+.waterfall .hiddenFooter{
+    visibility: hidden;
+    height: 1px;
+}

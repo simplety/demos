@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const chalk = require('chalk'),
+  weather = require('../src/index'),
+  package = require('../package')
+  console.log();
+  console.log(chalk.magenta("Thanks for using"),chalk.yellow("weather-clitool")+"\u0040"+chalk.cyan(package.version));
+  console.log();
+
+  //console.log(process.argv.slice(2))
+  weather(process.argv.slice(2));
