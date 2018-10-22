@@ -9,9 +9,8 @@ npm i -g weather-clitool
 
 ### Examples
 ```
-weather         //you will get weathter info by public IP.
-weather 北京
+weather         //you will get local weathter info.
 weather beijing
-weather 深圳 beijing
+weather 深圳 北京
 weather [IP]
 ```

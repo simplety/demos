@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+  <title>Todo 应用</title>
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
+
 <body>
-  <div id = "app">
-    <div class="newTask">
-      <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
-    </div>
-    <ol class="todos">
-      <todo-item
-      v-for="item in todoList"
-      v-bind:todo="item"
-      v-bind:key="item.id"></todo-item>
-    </ol>
-  </div>
-  <script src = "./dist/bundle.js"></script>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
 </body>
+
 </html>

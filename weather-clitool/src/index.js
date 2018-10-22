@@ -28,6 +28,9 @@ function weather(word) {
     publicIP.v4().then(function(ip){
       if(ip==undefined) return;
       getDataByCity(ip);
+    }).catch(function(e) {
+      console.log(chalk.red("\u300c 无法获取IP，可能是网络故障\u300d"));
+      console.log();
     });
   }
   
